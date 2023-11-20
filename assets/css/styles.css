@@ -1,13 +1,33 @@
-/* General Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+/* Main content container */
+.container {
+    min-height: calc(100% - 120px); /* Adjust based on header and footer height */
+    /* Other styling for container */
+}
+
+/* Footer styling */
+footer {
+    background-color: #00223F; /* Same as header's color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 
+
+header {
+    background-color: #00223F; /* Adjust to match logo's background color */
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
 header h1 {
-    margin-left: 15px; /* Adding  spacing between logo and title */
+    margin-left: 15px; /* Adds spacing between logo and title */
 }
 
 #app-logo {
@@ -27,6 +47,11 @@ body, html {
 }
 
 
+footer p {
+    margin: 0;
+}
+
+
 /* General Reset */
 * {
     box-sizing: border-box;
@@ -35,6 +60,13 @@ body, html {
 }
 
 
+
+/* Container for centering the layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
 
 /* Dashboard layout with search on the left and weather on the right */
 .dashboard {
@@ -150,24 +182,6 @@ body, html {
 .forecast-card h3, .forecast-card p {
     color: white;
 }
-
-
-/* Footer styling */
-footer {
-    background-color: #00223F; /* Same as header's color */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-}
-
-
 
 /* Responsive styles */
 @media (max-width: 1200px) {

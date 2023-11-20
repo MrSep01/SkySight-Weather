@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/images/logo.png" alt="SkySight Weather Logo" id="app-logo">
+        <h1>SkySight Weather</h1>
+    </header>
+
+    <div class="container">
+
+    <div class="container">
+        <div class="dashboard">
+            <!-- Search Area -->
+            <div class="search-area">
+                <h2>Search for a City</h2>
+                <div class="input-group">
+                    <input type="text" id="city-input" placeholder="San Diego" aria-label="City">
+                    <button id="search-button" class="btn search-btn">Search</button>
+                </div>
+                <div id="search-history" class="history-list"></div>
+                <button id="reset-button" class="btn reset-btn hidden">Reset Search History</button>
+            </div>
+
+            <!-- Weather Display Area -->
+            <div class="weather-display">
+                <div id="current-weather" class="current-weather"></div>
+                <div id="forecast-title">5-Day Forecast:</div>
+                <div id="forecast-container" class="forecast-grid"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Weather Dashboard. All rights reserved.</p>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>

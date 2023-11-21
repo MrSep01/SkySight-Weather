@@ -56,12 +56,12 @@ Implementing "History Reset" to Erase the search history of the user.
 
 ## Repository
 
-[GitHub Repository Link](https://github.com/yourusername/weather-dashboard)
+[GitHub Repository Link](https://github.com/MrSep01/SkySight-Weather)
 
 ## Demo
 
 Here's a live demo of the application:
-[Live Demo]()
+[Live Demo](https://mrsep01.github.io/SkySight-Weather/)
 
 ## Conclusion 🏁
 

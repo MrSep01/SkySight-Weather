@@ -1,56 +1,14 @@
-
-/* Main content container */
-.container {
-    min-height: calc(100% - 120px); /* Adjust based on header and footer height */
-    /* Other styling for container */
+/* CSS Variables for Maintainability */
+:root {
+    --main-bg-color: #00223F;
+    --button-green: #4CAF50;
+    --button-red: #f44336;
+    --button-blue: #1565C0;
+    --dark-bg: #333;
+    --input-border-color: #90caf9;
+    --box-shadow-color: rgba(0,0,0,0.1);
+    --forecast-card-shadow: rgba(0,0,0,0.5);
 }
-
-/* Footer styling */
-footer {
-    background-color: #00223F; /* Same as header's color */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-
-
-header {
-    background-color: #00223F; /* Adjust to match logo's background color */
-    color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
-
-header h1 {
-    margin-left: 15px; /* Adds spacing between logo and title */
-}
-
-#app-logo {
-    height: 60px;
-}
-
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-.container {
-    min-height: 100%;
-    position: relative;
-    padding-bottom: 60px; /* Height of the footer */
-}
-
-
-footer p {
-    margin: 0;
-}
-
 
 /* General Reset */
 * {
@@ -59,45 +17,87 @@ footer p {
     padding: 0;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
 
+/* Header Styling */
+header {
+    background-color: var(--main-bg-color);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
 
-/* Container for centering the layout */
+header h1 {
+    margin-left: 15px;
+}
+
+/* Logo Styling */
+.app-logo {
+    height: 60px;
+}
+
+/* Main Content Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 60px; /* Equal to Footer height */
 }
 
-/* Dashboard layout with search on the left and weather on the right */
+/* Footer Styling */
+footer {
+    background-color: var(--main-bg-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Dashboard Layout */
 .dashboard {
     display: flex;
     gap: 20px;
     margin-top: 20px;
 }
 
-/* Search area styling */
+/* Search Area */
 .search-area {
     flex-basis: 25%;
     min-width: 250px;
     background: #fff;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
 }
 
+/* Input Group Styling */
 .input-group {
     margin-bottom: 20px;
 }
 
-#city-input {
+/* City Input Styling */
+.city-input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #90caf9;
+    border: 2px solid var(--input-border-color);
     border-radius: 4px;
     font-size: 1rem;
 }
 
+/* Button Styling */
 .btn {
     padding: 10px;
     border: none;
@@ -109,14 +109,12 @@ footer p {
 }
 
 .search-btn {
-    background-color: #4CAF50; /* Green color for the search button */
+    background-color: var(--button-green);
     color: white;
 }
 
 .reset-btn {
-    background-color: #f44336; /* Red color for the reset button */
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background-color: var(--button-red);
     color: white;
 }
 
@@ -124,16 +122,16 @@ footer p {
     display: none;
 }
 
-/* Search history list styling */
+/* Search History List Styling */
 .history-list {
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Added space between city buttons */
+    gap: 5px;
     padding-block-end: 10px;
 }
 
 .history-list button {
-    background-color: #1565C0; /* Darker blue for city buttons */
+    background-color: var(--button-blue);
     color: white;
     border: none;
     padding: 5px 10px;
@@ -143,50 +141,49 @@ footer p {
     font-size: 0.8rem;
 }
 
-/* Weather display styling */
+/* Weather Display Styling */
 .weather-display {
     flex-basis: 70%;
     background: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
 }
 
 .current-weather, .forecast-grid {
     margin-bottom: 20px;
 }
 
-#forecast-title {
+.forecast-title {
     font-size: 1.5em;
     margin-bottom: 15px;
 }
 
 .forecast-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Adjust to have 5 items in a row */
+    grid-template-columns: repeat(5, 1fr);
     gap: 15px;
 }
 
 .forecast-card {
-    background: #333; /* Dark background */
-    color: white; /* White text for better readability */
+    background: var(--dark-bg);
+    color: white;
     border-radius: 4px;
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 4px var(--forecast-card-shadow);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Adjust the color of other elements inside the card as needed */
 .forecast-card h3, .forecast-card p {
     color: white;
 }
 
-/* Responsive styles */
+/* Responsive Design */
 @media (max-width: 1200px) {
     .forecast-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
 

@@ -22,7 +22,7 @@ function capitalizeCityName(cityName) {
 
 async function getCoordinates(city) {
     const formattedCity = capitalizeCityName(city);
-    const geoApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${formattedCity}&appid=${api_KEY}`;
+    const geoApiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${formattedCity}&appid=${api_KEY}`;
     try {
         const response = await fetch(geoApiUrl);
         const locations = await response.json();
